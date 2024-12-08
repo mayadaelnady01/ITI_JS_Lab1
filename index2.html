@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Lab1 Task2</title>
+</head>
+<body>
+    <script>
+        // Task 3
+      function Name() { //taking name and make sure it is a string 
+      let name;
+      while (true) {
+        name = prompt("Please enter your name:");
+        if (name && isNaN(name)) {
+          return name;
+        } else {
+          alert("Input is not accepted. Name must be a string.");
+        }
+      }
+    }
+
+    function BirthYear() { // taking birth year and make sure it's a Number and less than 2010 
+      let birthYear;
+      while (true) {
+        birthYear = prompt("Please enter your birth year. must be less than 2010 :");
+        if (birthYear && !isNaN(birthYear) && birthYear < 2010) {
+          return Number(birthYear);
+        } else {
+          alert("Input is not accepted. Birth year must be a number less than 2010");
+        }
+      }
+    }
+
+    let N = Name(); // getting the values by calling the functions
+    let BY = BirthYear();
+
+    let Age = 2024-BY; // calculating user's age
+
+    document.write("<u><b>Name</b></u> : "+ N);
+    document.write("<br>")
+    document.write("<u><b>Birth Year </b></u> : "+ BY);
+    document.write("<br>")
+    document.write("<u><b>Age</b></u> : "+ Age);
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+
+    // Task 4
+    document.write("<h3>Heading</h3>");
+    document.write("<hr>");
+    function Headers() {
+  for (let i = 1; i <= 6; i++) {
+    document.write("<h"+i+">This is header number "+i+"</h"+ i +">");
+  }
+  }
+   Headers();
+
+    </script>
+    
+</body>
+</html>
